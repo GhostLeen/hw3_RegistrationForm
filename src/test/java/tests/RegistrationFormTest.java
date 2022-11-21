@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -21,9 +22,13 @@ public class RegistrationFormTest {
     String state = "Uttar Pradesh";
     String city = "Agra";
 
+    @BeforeAll
+    static void browserConfiguration() {
+        Configuration.browserSize = "1920x1080";
+    }
+
     @Test
     void practiceRegistrationFillFormTest() {
-        Configuration.browserSize = "1920x1080";
         open("https://demoqa.com/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
         $("#firstName").setValue(firstName);
