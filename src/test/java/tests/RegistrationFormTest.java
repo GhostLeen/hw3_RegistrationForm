@@ -2,13 +2,14 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class RegistrationFormTest {
+public class RegistrationFormTest extends TestBase {
     String firstName = "Arkadiy";
     String lastName = "Parovozov";
     String email = "parovoz@mail.com";
@@ -22,12 +23,8 @@ public class RegistrationFormTest {
     String state = "Uttar Pradesh";
     String city = "Agra";
 
-    @BeforeAll
-    static void browserConfiguration() {
-        Configuration.browserSize = "1920x1080";
-    }
-
     @Test
+    @Disabled
     void practiceRegistrationFillFormTest() {
         open("https://demoqa.com/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));

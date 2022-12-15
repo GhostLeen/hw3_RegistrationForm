@@ -1,6 +1,7 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPracticePage;
 import testData.RandomData;
@@ -26,6 +27,7 @@ public class RegistrationWithFakerTest extends TestBase {
     String city = RandomData.randomCity(state);
 
     @Test
+    @Disabled
     void registrationFillFormTest() {
         //Заполнение формы регистрации
         registrationPracticePage.openPage()
