@@ -4,7 +4,7 @@ import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPracticePage;
-import testData.RandomData;
+import testdata.RandomData;
 
 public class RegistrationWithFakerTest extends TestBase {
     RegistrationPracticePage registrationPracticePage = new RegistrationPracticePage();
